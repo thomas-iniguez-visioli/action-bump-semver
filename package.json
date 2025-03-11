@@ -1,6 +1,6 @@
 {
   "name": "action-bump-semver",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "private": true,
   "description": "Bump a semver version up.",
   "main": "lib/main.js",
@@ -34,7 +34,7 @@
     "@types/node": "^14.0.10",
     "@types/semver": "^7.5.8",
     "@typescript-eslint/parser": "^3.1.0",
-    "@zeit/ncc": "^0.20.5",
+    "@vercel/ncc": "^0.38.3",
     "eslint": "^5.16.0",
     "eslint-plugin-github": "^2.0.0",
     "eslint-plugin-jest": "^22.21.0",
