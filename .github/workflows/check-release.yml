@@ -1,9 +1,9 @@
 name: Check Release
 
 on:
-  pull_request_target:
-    types:
-      - updated
+  pull_request:
+    branches:
+      - main
 
 jobs:
   release:
