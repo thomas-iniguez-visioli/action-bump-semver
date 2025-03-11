@@ -1,7 +1,7 @@
 name: Push a new tag with minor update
 
 on:
-  push:
+  pull-request:
     branches:
       - main
 
