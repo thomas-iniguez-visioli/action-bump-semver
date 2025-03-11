@@ -1,6 +1,6 @@
 {
   "name": "action-bump-semver",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "private": true,
   "description": "Bump a semver version up.",
   "main": "lib/main.js",
