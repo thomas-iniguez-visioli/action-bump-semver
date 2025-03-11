@@ -16,7 +16,12 @@ jobs:
       - uses: actions-ecosystem/action-get-latest-tag@v1
         id: get-latest-tag
        
-
+      - name:  'Automated Version Bump'
+        uses:  'phips28/gh-action-bump-version@master'
+        env:
+              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+              version-type:  'minor'
       - uses: actions-ecosystem/action-bump-semver@v1
         id: bump-semver
         with:
