@@ -19,8 +19,10 @@ jobs:
       - uses: actions-ecosystem/action-release-label@v1
         id: release-label
         if: ${{ steps.get-merged-pull-request.outputs.title != null }}
-        with:
+        env:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          
           labels: ${{ steps.get-merged-pull-request.outputs.labels }}
 
       - uses: actions-ecosystem/action-get-latest-tag@v1
@@ -60,8 +62,10 @@ jobs:
 
       - uses: actions-ecosystem/action-create-comment@v1
         if: ${{ steps.bump-semver.outputs.new_version != null }}
-        with:
+        env:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          
           number: ${{ steps.get-merged-pull-request.outputs.number }}
           body: |
             The new version [${{ steps.bump-semver.outputs.new_version }}](https://github.com/${{ github.repository }}/releases/tag/${{ steps.bump-semver.outputs.new_version }}) has been released :tada:
