@@ -3,7 +3,7 @@ name: Check Release
 on:
   pull_request_target:
     types:
-      - labeled
+      - updated
 
 jobs:
   release:
