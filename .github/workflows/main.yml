@@ -30,3 +30,11 @@ jobs:
         env:
           NEW_TAG: ${{ steps.version-bump.outputs.newTag }}
         run: echo "new tag $NEW_TAG"
+      - uses: actions/create-release@v1
+        
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.version-bump.outputs.newTag }}
+          release_name: ${{ steps.version-bump.outputs.newTag }}
+          body: ${{ steps.version-bump.outputs.newTag }}
