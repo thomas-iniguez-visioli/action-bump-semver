@@ -3,13 +3,13 @@ name: Check Release
 on:
   pull_request_target:
     types:
-      - labeled
+      - updated
 
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - uses: actions-ecosystem/action-release-label@v1
         id: release-label
