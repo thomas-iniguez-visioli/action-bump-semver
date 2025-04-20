@@ -1,5 +1,5 @@
 # Action Bump Semver
-
+test
 [![actions-workflow-test][actions-workflow-test-badge]][actions-workflow-test]
 [![release][release-badge]][release]
 [![license][license-badge]][license]
